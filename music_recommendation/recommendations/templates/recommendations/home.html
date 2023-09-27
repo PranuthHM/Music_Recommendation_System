@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+</head>
+<body><div class="all">
+    <center>
+    <h1>Welcome to Music Recommendation System</h1>
+    <form action="{% url 'recommendations' %}" method="post">
+        {% csrf_token %}
+        <label for="song_name">Select a Song:</label><br>
+        <select id="song_name" name="song_name">
+            {% for song in songs %}
+                <option value="{{ song }}">{{ song }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if recommended_songs %}
+    <h2>Recommended Songs:</h2>
+    <ul>
+        {% for song in recommended_songs %}
+            <li>{{ song }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</div>
+</center>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation</title>
+</head>
+<body>
+    <h1>Welcome to Music Recommendation</h1>
+    <form action="{% url 'recommendations' %}" method="post">
+
+        {% csrf_token %}
+        <label for="song_name">Enter a Song:</label>
+        <input type="text" id="song_name" name="song_name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>  -->

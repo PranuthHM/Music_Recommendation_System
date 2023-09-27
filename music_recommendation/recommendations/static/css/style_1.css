@@ -1,0 +1,60 @@
+body{
+    background: url('jaspreet-kalsi-hQHu8zmcWGY-unsplash.jpg'),linear-gradient(180deg,rgb(159, 101, 36),rgb(232, 185, 92)); 
+    background-repeat: no-repeat,repeat;
+    background-size: 2000PX;
+    
+}
+
+
+button{
+    width: 15%;
+    height: 12%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(225, 23, 23);
+    font-size: 18px;
+    color:white;
+    cursor: pointer;
+    transition:all  0.4s ease-out;
+}
+
+button:hover{
+    background-color: rgb(255, 64, 0);
+    width: 15%;
+    height: 12%;
+    font-size: 21px;
+    padding: 10px;
+    box-shadow: 0 5px 5px whitesmoke;
+    transform: scale(1.1);
+}
+
+ul{
+    list-style: none;
+}
+h1{
+    margin-top: 10px;
+    font-family: cursive;
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+li{
+    
+    font-family: cursive;
+    font-size: 30px;
+    font-weight:800;
+    margin: 3px;
+}
+
+div h2{
+    font-family: cursive;
+    font-size: 35px;
+}
+div img{
+    border-radius: 8px;
+    width: 250px;
+    
+}
+
+

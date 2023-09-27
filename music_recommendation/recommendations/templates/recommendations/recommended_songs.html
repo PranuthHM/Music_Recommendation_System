@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Songs</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_1.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Recommended Songs</h1>
+        
+        {% for song, poster in song_poster_zip %}
+            <div>
+                <h2>{{ song }}</h2>
+                <img src="{{ poster }}" alt="{{ song }}">
+            </div>
+        {% endfor %}
+        <br>
+        <button onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Songs</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_1.css' %}">
+</head>
+<body>
+    <center>
+    <h1>Recommended Songs</h1>
+    <ul>
+        {% for song in recommended_songs %}
+            <li>{{ song }}.</li>
+        {% endfor %}
+    </ul>
+    
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    </center>
+</body>
+</html> -->
